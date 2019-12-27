@@ -1,0 +1,44 @@
+[package]
+name = "curtis"
+version = "0.1.0"
+authors = ["Codeb Fan <codeb2cc@gmail.com>"]
+edition = "2018"
+
+[workspace]
+members = ["core", "binance", "gate", "huobi", "okex"]
+
+[dependencies]
+actix = "0.8"
+actix-codec = "0.1"
+actix-http = "0.2"
+awc = { version = "0.2", features = ["ssl", "flate2-rust"] }
+base64 = "0.11"
+bytes = "0.4"
+clap = { version = "2.33", features = ["yaml"] }
+chrono = "0.4"
+failure = "0.1"
+flate2 = "1.0"
+futures = "0.1"
+lazy_static = "1.4"
+log = "0.4"
+openssl = { version = "0.10", features = ["v111"] }
+ring = "0.16"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+slog = { version = "2.5", features = ["max_level_trace", "release_max_level_warn"] }
+slog-async = "2.3"
+slog-envlogger = "2.2"
+slog-scope = "4.3"
+slog-stdlog = "4.0"
+slog-term = "2.4"
+termion = "1.5"
+tokio = "0.1"
+toml = "0.5"
+tui = "0.6"
+url = "2.1"
+
+curtis-core = { path = "./core" }
+curtis-binance = { path = "./binance" }
+curtis-gate = { path = "./gate" }
+curtis-huobi = { path = "./huobi" }
+curtis-okex = { path = "./okex" }

@@ -1,0 +1,68 @@
+####
+# Binance
+####
+[binance]
+enabled = true
+key = ""
+secret = ""
+
+spot_ws_endpoint = "wss://stream.binance.com:9443/ws"
+futures_ws_endpoint = "wss://fstream.binance.com/ws"
+
+init_requests = [
+    '{"method":"SUBSCRIBE","params":["ethusdt@depth10@100ms", "ethusdt@trade"],"id":2}',
+]
+
+####
+# Gate.io
+####
+[gate]
+enabled = true
+# v3
+key = ""
+secret = ""
+# v4
+#key = ""
+#secret = ""
+
+spot_ws_endpoint = "wss://ws.gate.io/v3/"
+futures_ws_endpoint = "wss://fx-ws.gateio.ws/v4/ws/btc"
+
+init_requests = [
+    '{"id":1,"method":"depth.subscribe","params":["ETH_USDT",5,"0.0001"]}',
+    '{"id":1, "method":"trades.subscribe", "params":["ETH_USDT"]}',
+]
+
+
+####
+# Huobi
+####
+[huobi]
+enabled = true
+key = ""
+secret = ""
+
+spot_ws_endpoint = "wss://api.huobi.pro/ws"
+futures_ws_endpoint = "wss://www.btcgateway.pro/ws"
+
+init_requests = [
+    '{"sub": "market.ethusdt.depth.step0", "id": "1"}',
+    '{"sub": "market.ethusdt.trade.detail", "id": "2"}',
+]
+
+####
+# OKEx
+####
+[okex]
+enabled = true
+key = ""
+secret = ""
+passphrase = ""
+
+spot_ws_endpoint = "wss://real.okex.com:8443/ws/v3"
+futures_ws_endpoint = "wss://real.okex.com:8443/ws/v3"
+
+init_requests = [
+    '{"op": "subscribe", "args": ["spot/trade:ETH-USDT"]}',
+    '{"op": "subscribe", "args": ["spot/depth5:ETH-USDT"]}',
+]

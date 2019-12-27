@@ -1,0 +1,13 @@
+[package]
+name = "curtis-core"
+version = "0.1.0"
+authors = ["Codeb Fan <codeb2cc@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+actix = "0.8"
+awc = { version = "0.2", features = ["ssl", "flate2-rust"] }
+chrono = "0.4"
+openssl = { version = "0.10", features = ["v111"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
